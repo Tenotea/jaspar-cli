@@ -79,7 +79,7 @@ interface previousPath {
 	path?: string
 }
 
-jaspar.use('/assets', express.static(path.join(__dirname, './assets')))
+jaspar.use('/assets', express.static(path.join(__dirname, './client/assets')))
 
 jaspar.get('*', (req, res) => {
 	req.url = decodeURIComponent(req.url)
@@ -135,10 +135,10 @@ if (localNetwork) {
 		const msg = chalk.blackBright.bold(`
 		🐱‍🚀🐱‍🚀 jaspar is running 🐱‍🚀🐱‍🚀
 		
-		>>> http://${localNetwork} <<<
+		>>> http://${localNetwork}:${process.env['PORT']} <<<
 		
 		Thank you for choosing jaspar
-		HIRE ME: https://tenotea.dev
+		Find me on GitHub: ${chalk.blue.bold('https://github.com/tenotea')}
 	`)
 	
 		console.log(boxen(msg, {

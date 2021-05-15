@@ -1,22 +1,24 @@
 {
   "name": "jaspar-cli",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "postbuild": "cp -r src/client dist/client",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tenotea/jaspar.git"
+    "url": "git+https://github.com/tenotea/jaspar-cli.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tenotea/jaspar/issues"
+    "url": "https://github.com/tenotea/jaspar-cli/issues"
   },
-  "homepage": "https://github.com/tenotea/jaspar#readme",
+  "homepage": "https://github.com/tenotea/jaspar-cli#readme",
   "bin": {
     "jaspar": "dist/index.js"
   },
@@ -24,12 +26,13 @@
     "boxen": "^5.0.1",
     "chalk": "^4.1.1",
     "express": "^4.17.1",
-    "yargs": "^17.0.1"
+    "yargs": "^17.0.1",
+    "pm2": "^4.5.6"
   },
   "devDependencies": {
     "@types/express": "^4.17.11",
     "@types/node": "^15.0.3",
     "@types/yargs": "^16.0.1",
-    "pm2": "^4.5.6"
+    "typescript": "^4.2.4"
   }
 }
