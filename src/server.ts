@@ -6,7 +6,7 @@ import chalk from 'chalk'
 import boxen from 'boxen'
 import { localNetwork } from '.'
 const homedir = path.resolve(os.homedir())
-const HUGO = express()
+const jaspar = express()
 
 function getExt(url:string, filename: string): string {
 	return path.extname(path.join(__dirname, url,filename)).replace('.', '')
@@ -55,7 +55,7 @@ function fileType (ext:string, dir:boolean): string {
 	return 'file'
 }
 
-class HugoFile {
+class jasparFile {
 	public name: string
 	public dir: boolean
 	public ext: string
@@ -79,9 +79,9 @@ interface previousPath {
 	path?: string
 }
 
-HUGO.use('/assets', express.static(path.join(__dirname, './assets')))
+jaspar.use('/assets', express.static(path.join(__dirname, './assets')))
 
-HUGO.get('*', (req, res) => {
+jaspar.get('*', (req, res) => {
 	req.url = decodeURIComponent(req.url)
 	if (!getExt(req.url, '')) {
 		fs.readdir(path.join(homedir, req.url), { withFileTypes: true }, (error, result) => {
@@ -91,13 +91,13 @@ HUGO.get('*', (req, res) => {
 				return;
 			}
 
-			const files:HugoFile[] = []
+			const files:jasparFile[] = []
 			result.forEach( file => {
 				try {
 					fs.openSync(path.join(homedir, req.url, file.name), 'r')
 					let fileStat = fs.statSync(path.join(homedir, req.url, file.name))
 					if (!['.', '_'].includes(<string> file.name[0])) {
-						files.push(new HugoFile(file, fileStat, req.url))
+						files.push(new jasparFile(file, fileStat, req.url))
 					}
 				} catch (e) {
 					// Ignore permission error
@@ -109,7 +109,7 @@ HUGO.get('*', (req, res) => {
 					res.json('Error creating view')
 					return
 				}
-				const htmlTemplate = (files: HugoFile[], paths: previousPath[]) => eval(template.toString('utf-8'))
+				const htmlTemplate = (files: jasparFile[], paths: previousPath[]) => eval(template.toString('utf-8'))
 				
 				const paths = req.url.split('/').filter( path => path )
 				const previousPaths: previousPath[] = []
@@ -131,13 +131,13 @@ HUGO.get('*', (req, res) => {
 })
 
 if (localNetwork) {
-	HUGO.listen( parseInt(<string> process.env['PORT']) || parseInt(<string> process.env['HUGO_PORT']) || 80, localNetwork, () => {
+	jaspar.listen( parseInt(<string> process.env['PORT']) || parseInt(<string> process.env['jaspar_PORT']) || 80, localNetwork, () => {
 		const msg = chalk.blackBright.bold(`
-		🐱‍🚀🐱‍🚀 HUGO is running 🐱‍🚀🐱‍🚀
+		🐱‍🚀🐱‍🚀 jaspar is running 🐱‍🚀🐱‍🚀
 		
 		>>> http://${localNetwork} <<<
 		
-		Thank you for choosing hugo
+		Thank you for choosing jaspar
 		HIRE ME: https://tenotea.dev
 	`)
 	

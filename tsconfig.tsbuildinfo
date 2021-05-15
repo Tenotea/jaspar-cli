@@ -457,17 +457,17 @@
         "affectsGlobalScope": false
       },
       "./src/commands/run.ts": {
-        "version": "b2904addad8033ccd07bb9b3170b6ce81740a90976da93bd775c4c0568bf89df",
-        "signature": "83ff45bd1b88386ab080810ac722eecb410bd1ccaa9dab805503a6274b684404",
+        "version": "7d8d3dba39343de20974168c8e1a334215eee872b24f1d202a6c304c9ccec20e",
+        "signature": "c49cdb04375ad13ac1b4967971aead412a1ed6b84b8dda873dc0a5b4d5823bf8",
         "affectsGlobalScope": false
       },
       "./src/commands/stop.ts": {
-        "version": "9dd4b4de4c40905a53134eaa4638f3ef21a9cf01686459f8c5c3525ae1372651",
-        "signature": "be939bfb3bb9330be1a69744451c163c735f3501f0a2b050a003e6d9487e1bcc",
+        "version": "66cba95aef95d16cedb7883168e1919fe9743a8cccc681f4ef2d0112da056ab1",
+        "signature": "acc8f0fd95a6c474f55bbf93cfd8f9da440de3da848b8dd301e29927818bbe5a",
         "affectsGlobalScope": false
       },
       "./src/index.ts": {
-        "version": "0edac33f59ce293dfa0f1261bc39e4d469f7603d83ba37cdf27ba94c10c6da22",
+        "version": "c689d8502b39c8786dae300b40b1fc728bcdb747248e8028cfb05c1312370dd2",
         "signature": "f5de172da1518defba557e6cc64513f7f8ba0579d1bf9a1488bae018825867d3",
         "affectsGlobalScope": false
       },
@@ -762,7 +762,7 @@
         "affectsGlobalScope": false
       },
       "./src/server.ts": {
-        "version": "f696496043dd1c0e11b0ec73b8b5a934c51f5b606f4859e34daf704e0cef00cc",
+        "version": "58f20efbb5fca77391812930a2bca68539261bfaf3e82986c71d5a53a2c7a3ab",
         "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6",
         "affectsGlobalScope": false
       }
@@ -791,7 +791,6 @@
       "esModuleInterop": true,
       "skipLibCheck": true,
       "forceConsistentCasingInFileNames": true,
-      "watch": true,
       "configFilePath": "./tsconfig.json"
     },
     "referencedMap": {

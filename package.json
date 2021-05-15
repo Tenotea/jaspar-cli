@@ -1,5 +1,5 @@
 {
-  "name": "hugo-cli",
+  "name": "jaspar-cli",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tenotea/hugo.git"
+    "url": "git+https://github.com/tenotea/jaspar.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tenotea/hugo/issues"
+    "url": "https://github.com/tenotea/jaspar/issues"
   },
-  "homepage": "https://github.com/tenotea/hugo#readme",
+  "homepage": "https://github.com/tenotea/jaspar#readme",
   "bin": {
-    "hugo": "dist/index.js"
+    "jaspar": "dist/index.js"
   },
   "dependencies": {
     "boxen": "^5.0.1",
