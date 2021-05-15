@@ -462,7 +462,7 @@
         "affectsGlobalScope": false
       },
       "./src/commands/stop.ts": {
-        "version": "66cba95aef95d16cedb7883168e1919fe9743a8cccc681f4ef2d0112da056ab1",
+        "version": "c0b2b15fb89dfce4b5390849242a88ebca8b7cc0a8eb1969b65b3c4d3a79c57f",
         "signature": "acc8f0fd95a6c474f55bbf93cfd8f9da440de3da848b8dd301e29927818bbe5a",
         "affectsGlobalScope": false
       },
